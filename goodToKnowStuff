@@ -1,0 +1,18 @@
+
+//to get access to something in the root
+Toolbar toolbar =  view.getRootView().findViewById(R.id.toolbar);
+toolbar.setTitle("New Spending");
+
+
+FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+fragmentTransaction.add(R.id.nav_overView, new TestFragment());
+fragmentTransaction.commit();
+
+
+AppConstants is the foundation of the application that initialize everything in the beginning.
+
+                LocalDate start = YearMonth.now().atDay(1).minusMonths(1);
+                LocalDate end   = YearMonth.now().atEndOfMonth();
+
+                Log.i(tag,start.toString());
+                Log.i(tag, end.toString());
